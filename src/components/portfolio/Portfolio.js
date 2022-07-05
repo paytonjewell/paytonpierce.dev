@@ -4,6 +4,7 @@ import mock2 from '../../img/mock2.png';
 import mock3 from '../../img/mock3.png';
 import mock4 from '../../img/mock4.png';
 import mock5 from "../../img/mock5.png";
+import mock6 from "../../img/mock6.png"
 import PortfolioBlock from "./PortfolioBlock";
 import {Box, Grid} from "@mui/material";
 
@@ -37,6 +38,11 @@ const projects = [
         live: "https://paytonjewell.github.io/gradient-generator/",
         source: "https://github.com/paytonjewell/gradient-generator",
         title: "Gradient Generator"
+    },
+    {
+        image: mock6,
+        live: "https://ztm-smart-brain-frontend.herokuapp.com/",
+        title: "SmartBrain"
     }
 ]
 
