@@ -37,13 +37,13 @@ export default function Navbar({darkMode, handleClick}) {
          <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
               gap={{xs: '2rem', md: '8rem'}}
               textTransform={'lowercase'} fontSize={'1rem'}>
-            {links.map(link => (
-               <Link to={link.to} onClick={() => setActive(link.active)}>
-                  <li className={(link.active === active && !link.image) && Style.active}>
-                     {link.name && <p style={{paddingBottom: '0.5rem'}}>{link.name}</p>}
-                     {link.image && <img alt={''} src={link.image} style={{maxWidth: '75px'}}/>}
-                  </li>
-               </Link>
+            {links.map((link, index) => (
+                <li className={(link.active === active && !link.image) ? Style.active : ''} key={index}>
+                   <Link aria-label={'home page'} to={link.to} onClick={() => setActive(link.active)}>
+                      {link.name && <p style={{paddingBottom: '0.5rem'}}>{link.name}</p>}
+                      {link.image && <img alt={''} src={link.image} style={{maxWidth: '75px'}}/>}
+                   </Link>
+                </li>
             ))}
             <Toggler darkMode={darkMode} handleClick={handleClick}/>
          </Box>

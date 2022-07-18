@@ -10,7 +10,7 @@ const bioBullets = [
    {
       link: "https://www.travelwisconsin.com/",
       emoji: "🧀",
-      text: "based in wisconsin"
+      text: "based in wisconsin",
    },
    {
       link: null,
@@ -32,15 +32,18 @@ const bioBullets = [
 const socials = [
    {
       link: "https://github.com/paytonjewell",
-      icon: "fa fa-github"
+      icon: "fa fa-github",
+      label: 'Github'
    },
    {
       link: "www.linkedin.com/in/payton-pierce",
-      icon: "fa fa-linkedin"
+      icon: "fa fa-linkedin",
+      label: 'LinkedIn'
    },
    {
       link: 'https://twitter.com/paytoncodes',
-      icon: "fa fa-twitter"
+      icon: "fa fa-twitter",
+      label: 'Twitter'
    }
 ]
 
@@ -49,7 +52,7 @@ export default function Home() {
    return (
       <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
            justifyContent={'center'} minHeight={'calc(100vh - 175px)'}>
-         <Box className={classNames(Style.avatar, Style.shadowed)} component={'img'} src={me} width={{xs: '35vh', md: '40vh'}}
+         <Box className={classNames(Style.avatar, Style.shadowed)} component={'img'} alt={'image of woman with brown curly hair and glasses smiling at the camera'} src={me} width={{xs: '35vh', md: '40vh'}}
               height={{xs: '35vh', md: '40vh'}}
               borderRadius={'50%'} p={'0.75rem'} mb={{xs: '1rem', sm: 0}} mr={{xs: 0, md: '2rem'}}/>
          <Box>
@@ -57,13 +60,15 @@ export default function Home() {
             </h1>
             <h2>I'm a front-end developer.</h2>
             <Box component={'ul'} p={'0.8rem'}>
-               {bioBullets.map(bio => (
-                  <EmojiBullet link={bio.link} emoji={bio.emoji} text={bio.text}/>
+               {bioBullets.map((bio, index) => (
+                  <li key={index}>
+                     <EmojiBullet link={bio.link} emoji={bio.emoji} text={bio.text}/>
+                  </li>
                ))}
             </Box>
             <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}}>
-               {socials.map(social => (
-                  <SocialIcon link={social.link} icon={social.icon} />
+               {socials.map((social, index) => (
+                  <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />
                ))}
             </Box>
          </Box>
