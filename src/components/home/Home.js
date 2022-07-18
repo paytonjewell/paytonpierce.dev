@@ -13,7 +13,7 @@ const bioBullets = [
       text: "based in wisconsin",
    },
    {
-      link: null,
+      link: 'https://www.mathisonprojectsinc.com',
       emoji: "💻",
       text: "software developer at mathison projects"
    },
