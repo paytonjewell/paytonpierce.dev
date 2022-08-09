@@ -36,7 +36,7 @@ const socials = [
       label: 'Github'
    },
    {
-      link: "www.linkedin.com/in/payton-pierce",
+      link: "https://linkedin.com/in/payton-pierce",
       icon: "fa fa-linkedin",
       label: 'LinkedIn'
    },
