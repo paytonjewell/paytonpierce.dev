@@ -10,7 +10,3 @@ img:hover {
     transform: translateY(-10px);
     transition: all ease 400ms;
 }
-
-a {
-    color: black !important;
-}
