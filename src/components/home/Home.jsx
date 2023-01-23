@@ -15,12 +15,7 @@ const bioBullets = [
    {
       link: 'https://www.mathisonprojectsinc.com',
       emoji: "💻",
-      text: "software developer at mathison projects"
-   },
-   {
-      link: "https://user-images.githubusercontent.com/18350557/94314005-5c9f6e00-ff45-11ea-86a1-5db9e1371750.jpg",
-      emoji: "🐈",
-      text: "cat mom"
+      text: "software engineer at mathison projects"
    },
    {
       link: "mailto:paytontaylor96@gmail.com?subject=Let's work on something together!",
