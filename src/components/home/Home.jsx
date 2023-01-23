@@ -27,18 +27,23 @@ const bioBullets = [
 const socials = [
    {
       link: "https://github.com/paytonjewell",
-      icon: "fa fa-github",
+      icon: "fab fa-github",
       label: 'Github'
    },
    {
       link: "https://linkedin.com/in/payton-pierce",
-      icon: "fa fa-linkedin",
+      icon: "fab fa-linkedin",
       label: 'LinkedIn'
    },
    {
       link: 'https://twitter.com/paytoncodes',
-      icon: "fa fa-twitter",
+      icon: "fab fa-twitter",
       label: 'Twitter'
+   },
+   {
+      link: '/Resume.pdf',
+      icon: 'far fa-file',
+      label: 'Resume'
    }
 ]
 
