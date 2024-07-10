@@ -5,16 +5,23 @@ import mock3 from '../../img/mock3.png';
 import mock4 from '../../img/mock4.png';
 import mock5 from "../../img/mock5.png";
 import mock6 from "../../img/mock6.png"
+import mock7 from "../../img/mock7.png";
 import PortfolioBlock from "./PortfolioBlock";
 import {Box, Grid} from "@mui/material";
 
 const projects = [
     {
-        image: mock5,
-        live: "https://paytonjewell.github.io/moviepedia/",
-        source: "https://github.com/paytonjewell/moviepedia",
-        title: "MoviePedia"
+        image: mock7,
+        live: "https://payton-pierce-weather-app.vercel.app/",
+        source: "https://github.com/paytonjewell/react-weather-app-v2",
+        title: "Weather App"
     },
+    // {
+    //     image: mock5,
+    //     live: "https://paytonjewell.github.io/moviepedia/",
+    //     source: "https://github.com/paytonjewell/moviepedia",
+    //     title: "MoviePedia"
+    // },
     {
         image: mock1,
         live: "https://paytonjewell.github.io/ReactPortfolioTemplate/",
@@ -33,17 +40,17 @@ const projects = [
         source: "https://github.com/paytonjewell/To-Do-List",
         title: "To-Do List"
     },
-    {
-        image: mock4,
-        live: "https://paytonjewell.github.io/gradient-generator/",
-        source: "https://github.com/paytonjewell/gradient-generator",
-        title: "Gradient Generator"
-    },
+    // {
+    //     image: mock4,
+    //     live: "https://paytonjewell.github.io/gradient-generator/",
+    //     source: "https://github.com/paytonjewell/gradient-generator",
+    //     title: "Gradient Generator"
+    // },
     {
         image: mock6,
         live: "https://ztm-smart-brain-frontend.herokuapp.com/",
         title: "SmartBrain"
-    }
+    },
 ]
 
 export default function Portfolio() {

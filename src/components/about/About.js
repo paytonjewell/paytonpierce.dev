@@ -66,11 +66,11 @@ export default function About() {
             className={Style.green}>(main)</span> $</span> ls</p>
          <ul>
             <li><Box component={'span'} mr={'1rem'}>📖</Box>reading</li>
-            <li><Box component={'span'} mr={'1rem'}>🎨</Box>digital art</li>
             <li><Box component={'span'} mr={'1rem'}>🎥</Box>movies</li>
             <li><Box component={'span'} mr={'1rem'}>🔮</Box>horror / spooky stuff</li>
-            <li><Box component={'span'} mr={'1rem'}>🍲</Box>cooking/food, particularly of the spicy variety
-            </li>
+            <li><Box component={'span'} mr={'1rem'}>🧶</Box>crochet</li>
+            <li><Box component={'span'} mr={'1rem'}>🐔</Box>chickens (I have 15!)</li>
+            <li><Box component={'span'} mr={'1rem'}>👩🏻‍🌾</Box>gardening</li>
          </ul>
       </>;
    }
