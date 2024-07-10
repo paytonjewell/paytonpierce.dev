@@ -7,7 +7,7 @@ import mock5 from "../../img/mock5.png";
 import mock6 from "../../img/mock6.png"
 import mock7 from "../../img/mock7.png";
 import PortfolioBlock from "./PortfolioBlock";
-import {Box, Grid} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const projects = [
     {
@@ -56,11 +56,17 @@ const projects = [
 export default function Portfolio() {
     return (
         <Box>
+            <Typography textAlign={'center'} mt={4}>
+                <p>Open Source Contributions:</p>
+                <ul>
+                    <li><a style={{fontWeight: 'bold'}} href="https://github.com/danielcranney/profileme-dev/pull/34" target="_blank">ProfileMe.dev</a></li>
+                </ul>
+            </Typography>
             <Grid container display={'flex'} justifyContent={'center'}>
                 {projects.map((project, index) => (
-                   <Grid item xs={12} md={6} key={index}>
-                       <PortfolioBlock image={project.image} live={project.live} source={project.source} title={project.title} />
-                   </Grid>
+                    <Grid item xs={12} md={6} key={index}>
+                        <PortfolioBlock image={project.image} live={project.live} source={project.source} title={project.title} />
+                    </Grid>
                 ))}
             </Grid>
         </Box>
