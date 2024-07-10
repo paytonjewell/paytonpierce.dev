@@ -41,7 +41,7 @@ const socials = [
       label: 'LinkedIn'
    },
    {
-      link: 'https://twitter.com/paytoncodes',
+      link: 'https://x.com/PaytonPierceDev',
       icon: "fa fa-twitter",
       label: 'Twitter'
    }
