@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Weather App',
     mockup: '/mockups/weatherAppMock.png',
-    live: 'https://payton-pierce-weather-app.vercel.app/',
+    live: 'https://weather-app.paytonpierce.dev',
     code: 'https://github.com/paytonjewell/react-weather-app-v2'
   },
   {
