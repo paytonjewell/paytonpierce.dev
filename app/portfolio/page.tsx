@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Weather App',
     mockup: '/mockups/weatherAppMock.png',
-    live: 'https://payton-pierce-weather-app.vercel.app/',
+    live: 'https://weather-app.paytonpierce.dev',
     code: 'https://github.com/paytonjewell/react-weather-app-v2'
   },
   {
@@ -17,13 +17,13 @@ const projects = [
   {
     title: 'Alarm Clock',
     mockup: '/mockups/clockMock.png',
-    live: 'https://paytonjewell.github.io/Analog-Clock-With-Darkmode-Toggle/',
+    live: 'https://darkmodeclock.paytonpierce.dev/',
     code: 'https://github.com/paytonjewell/Analog-Clock-With-Darkmode-Toggle'
   },
   {
     title: 'To-Do List',
     mockup: '/mockups/todoMock.png',
-    live: 'https://paytonjewell.github.io/To-Do-List/',
+    live: 'https://todolist.paytonpierce.dev/',
     code: 'https://github.com/paytonjewell/To-Do-List'
   },
 ]
