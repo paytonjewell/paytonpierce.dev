@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/nav/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/react"
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-grow flex flex-col justify-center items-center">{children}</main>
             <Footer />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
