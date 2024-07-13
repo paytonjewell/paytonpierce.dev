@@ -24,12 +24,12 @@ const About = () => {
       <FakeTerminalWindow>
         <Prompt content="cd skillsAndTools/Proficient" />
         <Prompt directory='/skillsAndTools/Proficient' branch={true} content="ls" />
-        <div className='flex justify-between'>
+        <div className='flex justify-start flex-wrap md:justify-between'>
           <ul>
             <SkillList title="TheObvious" items={skills.theObvious} />
             <SkillList title="ToolsOfTheTrade" items={skills.toolsOfTheTrade} />
           </ul>
-          <ul className="text-right">
+          <ul className="md:text-right">
             <SkillList title="LibrariesAndFrameworks" items={skills.librariesFrameworks} />
           </ul>
         </div>
