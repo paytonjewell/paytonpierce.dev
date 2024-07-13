@@ -11,7 +11,7 @@ const projects = [
   {
     title: 'Portfolio Template',
     mockup: '/mockups/portfolioTemplateMock.png',
-    live: 'https://paytonjewell.github.io/ReactPortfolioTemplate/',
+    live: 'https://reactportfoliotemplate.paytonpierce.dev/',
     code: 'https://github.com/paytonjewell/ReactPortfolioTemplate'
   },
   {
