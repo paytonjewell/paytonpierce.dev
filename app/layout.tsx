@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/nav/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "next-themes";
 
