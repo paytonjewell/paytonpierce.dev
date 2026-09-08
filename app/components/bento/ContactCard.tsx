@@ -1,7 +1,12 @@
+"use client";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaCopy, FaCheck } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
+
 import BentoCard from "./BentoCard";
 import { contact } from "@/lib/constants";
+import { useState } from "react";
 
 const socials = [
   {
@@ -21,22 +26,38 @@ const socials = [
   },
 ];
 
+const onCopyEmail = () => {
+  navigator.clipboard.writeText(contact.email);
+};
+
 const ContactCard = ({ className = "" }: { className?: string }) => {
+  const [emailWasCopied, setEmailWasCopied] = useState(false);
   return (
-    <BentoCard title="Contact" className={className}>
+    <BentoCard title="Get in touch" className={className}>
       <div className="flex flex-col gap-3 text-sm">
-        <a
-          href={`mailto:${contact.email}`}
-          className="link text-brand-start w-fit"
-        >
-          📧 {contact.email}
-        </a>
+        <span>
+          <a href={`mailto:${contact.email}`} className="link-brand">
+            {contact.email}
+          </a>
+          {!emailWasCopied ? (
+            <FaCopy
+              className="inline ml-2 cursor-pointer"
+              onClick={() => {
+                onCopyEmail();
+                setEmailWasCopied(true);
+                setTimeout(() => setEmailWasCopied(false), 2000);
+              }}
+            />
+          ) : (
+            <FaCheck color="green" className="inline ml-2 cursor-pointer" />
+          )}
+        </span>
         <a
           href={contact.resume.href}
           download={contact.resume.download}
-          className="link text-brand-start w-fit"
+          className="link-brand flex items-center gap-1"
         >
-          📝 Download my resume
+          CV <FaFileDownload color="white" />
         </a>
       </div>
 

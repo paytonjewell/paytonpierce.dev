@@ -11,6 +11,31 @@
   --color-brand-end: #ff79c6;
 }
 
+/* Muted text tiers, from least to most visible */
+@utility text-faint {
+  @apply text-base-content/45;
+}
+
+@utility text-muted {
+  @apply text-base-content/60;
+}
+
+@utility text-label {
+  @apply text-base-content/78;
+}
+
+@utility label-eyebrow {
+  @apply font-semibold uppercase tracking-wide;
+}
+
+@utility bg-brand-gradient {
+  @apply bg-linear-to-br from-brand-start to-brand-end;
+}
+
+@utility link-brand {
+  @apply text-brand-start w-fit;
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);

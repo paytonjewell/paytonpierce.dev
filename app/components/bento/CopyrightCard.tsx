@@ -5,7 +5,7 @@ const CopyrightCard = ({ className = "" }: { className?: string }) => {
 
   return (
     <BentoCard className={`justify-center ${className}`}>
-      <p className="text-sm text-center opacity-60">
+      <p className="text-sm text-center text-muted">
         &copy; {year} · Made with &hearts; by Payton Pierce
       </p>
     </BentoCard>

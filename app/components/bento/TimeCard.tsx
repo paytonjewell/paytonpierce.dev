@@ -56,31 +56,34 @@ const TimeCard = ({ className = "" }: { className?: string }) => {
   const now = timestamp ? new Date(timestamp) : null;
 
   return (
-    <BentoCard title="My Time vs. Yours" className={className}>
+    <BentoCard className={className}>
       {now && visitorTimeZone ? (
         <>
           <div className="flex justify-between items-end gap-4">
             <div>
-              <p className="text-xs opacity-50 mb-1">Me · Wisconsin</p>
+              <p className="text-xs text-faint mb-1 flex items-center gap-2">
+                <div className="h-2 w-2 bg-green-500 rounded-full" />
+                Wisconsin
+              </p>
               <p className="text-2xl font-semibold tabular-nums">
                 {formatTime(now, MY_TIME_ZONE)}
               </p>
             </div>
             <div className="text-right">
-              <p className="text-xs opacity-50 mb-1">You</p>
+              <p className="text-xs text-faint mb-1">You</p>
               <p className="text-2xl font-semibold tabular-nums">
                 {formatTime(now, visitorTimeZone)}
               </p>
             </div>
           </div>
-          <p className="text-xs opacity-50 mt-3">
+          <p className="text-xs text-faint mt-3">
             {(() => {
               const diff = Math.round(
                 (getOffsetMinutes(now, MY_TIME_ZONE) -
                   getOffsetMinutes(now, visitorTimeZone)) /
                   60,
               );
-              if (diff === 0) return "Same time as you";
+              if (diff === 0) return "We're in the same timezone!";
               return `${Math.abs(diff)}h ${diff > 0 ? "ahead of" : "behind"} you`;
             })()}
           </p>
