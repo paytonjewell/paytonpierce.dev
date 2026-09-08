@@ -1,6 +1,14 @@
+import Image from "next/image";
+
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <img alt="logo" src="/p2logo.png" className={`w-20 ${className}`} />
+    <Image
+      alt="logo"
+      src="/p2logo.png"
+      width={1414}
+      height={1209}
+      className={`w-20 h-auto ${className}`}
+    />
   )
 }
 

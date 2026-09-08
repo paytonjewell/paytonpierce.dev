@@ -38,3 +38,10 @@ next-env.d.ts
 # lockfiles
 yarn.lock
 package-lock.json
+
+# editor
+.idea/
+
+# next.js agent files
+AGENTS.md
+CLAUDE.md
