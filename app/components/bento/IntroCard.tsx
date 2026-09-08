@@ -14,7 +14,7 @@ const IntroCard = ({ className = "" }: { className?: string }) => {
             </span>
             <span className="animate-wave inline-block">🤚🏻</span>
           </h1>
-          <div className="text-sm text-muted tracking-wide space-y-2">
+          <div className="text-sm text-muted tracking-wide space-y-3 mt-2">
             <p>
               I&apos;m a frontend engineer doing what I love full-time at{" "}
               <Link
@@ -40,14 +40,14 @@ const IntroCard = ({ className = "" }: { className?: string }) => {
             </p>
           </div>
         </div>
-        <div className="relative w-60 shrink-0">
+        <div className="relative w-50 shrink-0">
           <Image
             src="/self.png"
             alt="Profile picture of Payton"
             width={450}
             height={450}
             priority
-            className="bg-brand-gradient rounded-full p-2 w-full h-auto"
+            className="bg-linear-to-br from-brand-start to-brand-end rounded-full p-2 w-full h-auto"
           />
         </div>
       </div>

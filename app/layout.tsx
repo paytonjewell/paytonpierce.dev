@@ -30,7 +30,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: ACCENT_SCRIPT }} />
       </head>
       <body className={nunito.className}>
-        <div className="max-w-6xl md:px-none px-6 min-h-screen mx-auto flex flex-col">
+        <div className="max-w-4xl md:px-none px-6 min-h-screen mx-auto flex flex-col">
           <Navbar />
           <main className="grow flex flex-col">{children}</main>
           <Analytics />
