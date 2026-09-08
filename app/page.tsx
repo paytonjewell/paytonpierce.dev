@@ -8,14 +8,20 @@ import CopyrightCard from "./components/bento/CopyrightCard";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full py-8">
-      <IntroCard className="sm:col-span-2" />
-      <StackCard className="lg:row-span-2" />
-      <ContactCard />
-      <TimeCard />
-      {/* <SpotifyCard /> */}
-      <AccentSwitcherCard />
-      <CopyrightCard />
+    <div className="grid grid-cols-1 lg:grid-cols-3 items-start gap-4 w-full py-8">
+      <IntroCard className="lg:col-span-2" />
+      <StackCard className="lg:col-start-3 lg:row-start-1 lg:row-span-2" />
+      <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
+        <div className="flex flex-col gap-4">
+          <ContactCard />
+          <AccentSwitcherCard />
+        </div>
+        <div className="flex flex-col gap-4">
+          <TimeCard />
+          {/* <SpotifyCard /> */}
+          <CopyrightCard />
+        </div>
+      </div>
     </div>
   );
 }
