@@ -1,25 +1,23 @@
-import Image from "next/image";
-
-const Logo = ({ className }: { className?: string }) => {
+const Logo = ({ className = "" }: { className?: string }) => {
   return (
-    <Image
-      alt="logo"
-      src="/p2logo.png"
-      width={1414}
-      height={1209}
-      className={`w-20 h-auto ${className}`}
-    />
-  )
-}
+    <div
+      className={`flex items-center justify-center w-16 aspect-square rounded-full bg-linear-to-br from-brand-start to-brand-end text-white font-black text-4xl ${className}`}
+      aria-label="Payton Pierce logo"
+      role="img"
+    >
+      p<sup className="text-sm font-extrabold -translate-y-1">2</sup>
+    </div>
+  );
+};
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="w-full flex justify-center items-center">
-<Logo />
+        <Logo />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

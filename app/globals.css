@@ -1,12 +1,14 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+  themes:
+    light --default,
+    dracula --prefersdark;
 }
 
 @theme {
   --animate-wave: wave 2s ease-in-out infinite;
-  --color-brand-start: var(--color-indigo-500);
-  --color-brand-end: var(--color-fuchsia-500);
+  --color-brand-start: #bd93f9;
+  --color-brand-end: #ff79c6;
 }
 
 @keyframes wave {
@@ -36,6 +38,38 @@
   }
 }
 
+:root[data-accent="default"] {
+  --color-brand-start: #bd93f9;
+  --color-brand-end: #ff79c6;
+}
+
+:root[data-accent="green"] {
+  --color-brand-start: #51fa7b;
+  --color-brand-end: #8be9fd;
+}
+
+:root[data-accent="yellow"] {
+  --color-brand-start: #f1fa8c;
+  --color-brand-end: #ffb86c;
+}
+
 html {
   @apply transition-colors duration-200;
+  background-image:
+    radial-gradient(
+      ellipse 90% 90% at 50% 30%,
+      transparent 10%,
+      var(--color-base-100) 75%
+    ),
+    repeating-linear-gradient(
+      to right,
+      color-mix(in oklch, var(--color-base-content) 10%, transparent) 0 1px,
+      transparent 1px 48px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--color-base-content) 10%, transparent) 0 1px,
+      transparent 1px 48px
+    );
+  background-attachment: fixed;
 }
