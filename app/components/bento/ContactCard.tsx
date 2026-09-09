@@ -1,30 +1,10 @@
 "use client";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { FaCopy, FaCheck } from "react-icons/fa";
-import { FaFileDownload } from "react-icons/fa";
+import { FaCopy, FaCheck, FaFileDownload } from "react-icons/fa";
 
 import BentoCard from "./BentoCard";
-import { contact } from "@/lib/constants";
+import { contact, socials } from "@/lib/constants";
 import { useState } from "react";
-
-const socials = [
-  {
-    icon: FaGithub,
-    href: "https://github.com/paytonjewell/",
-    label: "GitHub",
-  },
-  {
-    icon: FaLinkedin,
-    href: "https://linkedin.com/in/payton-pierce/",
-    label: "LinkedIn",
-  },
-  {
-    icon: FaXTwitter,
-    href: "https://x.com/paytonpiercedev",
-    label: "Twitter",
-  },
-];
 
 const copyEmail = async () => {
   try {
@@ -84,7 +64,7 @@ const ContactCard = ({ className = "" }: { className?: string }) => {
         {socials.map(({ icon: Icon, href, label }) => (
           <li
             key={label}
-            className="hover:scale-125 hover:text-brand-start transition-all ease-in-out"
+            className="hover:scale-110 hover:text-brand-start transition-all ease-in-out"
           >
             <Link href={href} target="_blank" aria-label={label}>
               <Icon />

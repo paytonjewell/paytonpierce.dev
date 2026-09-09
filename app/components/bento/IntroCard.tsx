@@ -16,14 +16,14 @@ const IntroCard = ({ className = "" }: { className?: string }) => {
             className="bg-linear-to-br from-brand-start to-brand-end rounded-full p-2 w-full h-auto"
           />
         </div>
-        <h1 className="text-4xl md:text-4xl text-center sm:text-left">
+        <h1 className="text-4xl md:text-3xl text-center sm:text-left">
           Hi, I&apos;m{" "}
           <span className="bg-linear-to-tl from-brand-start to-brand-end text-transparent bg-clip-text font-bold">
             Payton
           </span>
           <span className="animate-wave inline-block">🤚🏻</span>
         </h1>
-        <div className="text-sm text-label font-light space-y-3 mt-2">
+        <div className="text-sm text-muted space-y-3 mt-2">
           <p>
             I&apos;m a frontend engineer doing what I love full-time at{" "}
             <Link

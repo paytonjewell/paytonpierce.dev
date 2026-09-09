@@ -3,19 +3,23 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/nav/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import {
+  SITE_NAME,
+  ACCENT_STORAGE_KEY,
+  ACCENT_ATTRIBUTE,
+} from "@/lib/constants";
 
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Payton Pierce | Portfolio",
-  description:
-    "Portfolio of Payton Pierce, frontend developer located in Wisconsin",
+  title: `${SITE_NAME} | Portfolio`,
+  description: `Portfolio of ${SITE_NAME}, frontend developer located in Wisconsin`,
 };
 
 const ACCENT_SCRIPT = `(function () {
   try {
-    var accent = window.localStorage.getItem("accent");
-    if (accent) document.documentElement.setAttribute("data-accent", accent);
+    var accent = window.localStorage.getItem("${ACCENT_STORAGE_KEY}");
+    if (accent) document.documentElement.setAttribute("${ACCENT_ATTRIBUTE}", accent);
   } catch (e) {}
 })();`;
 

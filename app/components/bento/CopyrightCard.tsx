@@ -1,4 +1,5 @@
 import BentoCard from "./BentoCard";
+import { SITE_NAME } from "@/lib/constants";
 
 const CopyrightCard = ({ className = "" }: { className?: string }) => {
   const year = new Date().getFullYear();
@@ -6,7 +7,7 @@ const CopyrightCard = ({ className = "" }: { className?: string }) => {
   return (
     <BentoCard className={`justify-center ${className}`}>
       <p className="text-sm text-center text-muted">
-        &copy; {year} · Made with &hearts; by Payton Pierce
+        &copy; {year} · Made with &hearts; by {SITE_NAME}
       </p>
     </BentoCard>
   );

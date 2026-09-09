@@ -1,21 +1,13 @@
 import BentoCard from "./BentoCard";
-import { skills } from "@/lib/constants";
-
-const groups = [
-  { label: "Languages", items: skills.languages },
-  { label: "Frameworks & State", items: skills.frameworksState },
-  { label: "Styling & UI", items: skills.stylingUI },
-  { label: "Backend & Data", items: skills.backendData },
-  { label: "Dev Workflow", items: skills.devWorkflow },
-];
+import { skillGroups } from "@/lib/constants";
 
 const StackCard = ({ className = "" }: { className?: string }) => {
   return (
     <BentoCard title="Stack & Tools" className={className}>
       <div className="flex flex-col gap-4">
-        {groups.map(({ label, items }) => (
+        {skillGroups.map(({ label, items }) => (
           <div key={label}>
-            <h3 className="text-[0.65rem] label-eyebrow text-faint mb-2">
+            <h3 className="text-xs label-eyebrow text-faint mb-2">
               {label}
             </h3>
             <ul className="flex flex-wrap gap-2">

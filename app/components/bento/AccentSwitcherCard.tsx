@@ -2,9 +2,8 @@
 
 import { useSyncExternalStore } from "react";
 import BentoCard from "./BentoCard";
-import { ACCENTS } from "@/lib/constants";
+import { ACCENTS, ACCENT_ATTRIBUTE, ACCENT_STORAGE_KEY } from "@/lib/constants";
 
-const STORAGE_KEY = "accent";
 const ACCENT_EVENT = "accent-change";
 
 const subscribe = (callback: () => void) => {
@@ -17,7 +16,7 @@ const subscribe = (callback: () => void) => {
 };
 
 const getSnapshot = () =>
-  window.localStorage.getItem(STORAGE_KEY) ?? ACCENTS[0].id;
+  window.localStorage.getItem(ACCENT_STORAGE_KEY) ?? ACCENTS[0].id;
 const getServerSnapshot = () => ACCENTS[0].id;
 
 const AccentSwitcherCard = ({ className = "" }: { className?: string }) => {
@@ -28,8 +27,8 @@ const AccentSwitcherCard = ({ className = "" }: { className?: string }) => {
   );
 
   const select = (id: string) => {
-    document.documentElement.setAttribute("data-accent", id);
-    window.localStorage.setItem(STORAGE_KEY, id);
+    document.documentElement.setAttribute(ACCENT_ATTRIBUTE, id);
+    window.localStorage.setItem(ACCENT_STORAGE_KEY, id);
     window.dispatchEvent(new Event(ACCENT_EVENT));
   };
 

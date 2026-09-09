@@ -1,9 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BentoCard from "./components/bento/BentoCard";
+import { SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | Payton Pierce",
+  title: `Page Not Found | ${SITE_NAME}`,
 };
 
 export default function NotFound() {

@@ -2,8 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import BentoCard from "./BentoCard";
-
-const MY_TIME_ZONE = "America/Chicago";
+import { MY_TIME_ZONE } from "@/lib/constants";
 
 const subscribeToClock = (callback: () => void) => {
   const id = setInterval(callback, 30_000);
