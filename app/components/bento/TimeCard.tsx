@@ -62,7 +62,7 @@ const TimeCard = ({ className = "" }: { className?: string }) => {
           <div className="flex justify-between items-end gap-4">
             <div>
               <p className="text-xs text-faint mb-1 flex items-center gap-2">
-                <div className="h-2 w-2 bg-green-500 rounded-full" />
+                <span className="h-2 w-2 bg-green-500 rounded-full" />
                 Wisconsin
               </p>
               <p className="text-2xl font-semibold tabular-nums">

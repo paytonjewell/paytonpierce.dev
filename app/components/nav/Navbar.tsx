@@ -1,7 +1,7 @@
 const Logo = ({ className = "" }: { className?: string }) => {
   return (
     <div
-      className={`flex items-center justify-center w-16 aspect-square rounded-full bg-linear-to-br from-brand-start to-brand-end text-base-300 font-black text-4xl ${className}`}
+      className={`flex items-center justify-center w-16 aspect-square rounded-full bg-linear-to-br from-brand-start to-brand-end text-white font-black text-4xl ${className}`}
       aria-label="Payton Pierce logo"
       role="img"
     >

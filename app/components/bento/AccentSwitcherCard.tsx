@@ -35,14 +35,14 @@ const AccentSwitcherCard = ({ className = "" }: { className?: string }) => {
 
   return (
     <BentoCard title="Accent Color" className={className}>
-      <div className="flex gap-3">
+      <div className="flex gap-3 justify-center">
         {ACCENTS.map(({ id, label, from, to }) => (
           <button
             key={id}
             type="button"
             aria-label={`Use ${label} accent`}
             onClick={() => select(id)}
-            className={`w-9 h-9 rounded-full transition-transform hover:scale-110 ${
+            className={`w-12 h-12 rounded-full transition-transform hover:scale-110 ${
               active === id
                 ? "ring-2 ring-offset-2 ring-offset-base-200 ring-base-content"
                 : ""

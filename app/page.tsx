@@ -9,18 +9,23 @@ import CopyrightCard from "./components/bento/CopyrightCard";
 export default function Home() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 items-start gap-4 w-full py-8">
-      <IntroCard className="lg:col-span-2" />
-      <StackCard className="lg:col-start-3 lg:row-start-1 lg:row-span-2" />
-      <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
-        <div className="flex flex-col gap-4">
-          <ContactCard />
-          <AccentSwitcherCard />
+      {/* contents on mobile lets order-* interleave with the right group below; a real flex column at lg keeps this side's height independent (masonry) */}
+      <div className="contents lg:flex lg:flex-col lg:col-span-2 lg:gap-4">
+        <IntroCard className="order-1" />
+        <div className="order-3 grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
+          <div className="flex flex-col gap-4">
+            <ContactCard />
+            <AccentSwitcherCard />
+          </div>
+          <div className="flex flex-col gap-4">
+            <TimeCard />
+            <SpotifyCard />
+          </div>
         </div>
-        <div className="flex flex-col gap-4">
-          <TimeCard />
-          {/* <SpotifyCard /> */}
-          <CopyrightCard />
-        </div>
+      </div>
+      <div className="contents lg:flex lg:flex-col lg:gap-4">
+        <StackCard className="order-2" />
+        <CopyrightCard className="order-4" />
       </div>
     </div>
   );
