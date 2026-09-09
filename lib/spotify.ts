@@ -36,7 +36,10 @@ const getAccessToken = async () => {
     cache: "no-store",
   });
 
-  if (!res.ok) return null;
+  if (!res.ok) {
+    console.error("Spotify token refresh failed:", await res.text());
+    return null;
+  }
   const data = await res.json();
   return data.access_token as string;
 };
@@ -74,11 +77,18 @@ export const getSpotifyTrack = async (): Promise<SpotifyTrack | null> => {
       next: { revalidate: 30 },
     });
 
-    if (!recentRes.ok) return null;
+    if (!recentRes.ok) {
+      console.error(
+        "Spotify recently-played request failed:",
+        await recentRes.text(),
+      );
+      return null;
+    }
     const recentData = await recentRes.json();
     const track = recentData?.items?.[0]?.track;
     return track ? toTrack(track, false) : null;
-  } catch {
+  } catch (error) {
+    console.error("Failed to load Spotify track:", error);
     return null;
   }
 };
